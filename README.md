@@ -2,16 +2,36 @@
 
 Dummy homework for explanation and showing the workflow
 
+* Original repository with homework: [MI-AFP/hw00](https://github.com/MI-AFP/hw00) 
+
 ## Task
 
 Your task is just to try the workflow of doing homeworks:
 
-1. Create your own (private) repository and invite teacher(s) as collaborator(s)
-2. Set-up the upstream to this repository and get the content (it is better than copy/paste if there will be some fixes later on)
-3. Do the changes in separate branch (name is up to you, e.g., `solution`)
-4. Complete the task - use `stack` (esp. `stack test`, but also `stack ghci` can be useful), visit `test/` to see the expected behavior of your implementation in `src`
-5. Create pull request and request a review from teacher(s)
-6. Wait for the review... :coffee:
+1. Create new personal private repository (with some good name like `MI-AFP_hwNN`) for the homework, do not create `README`, `.gitignore`, nor `LICENSE` yet.
+2. [Turn on](https://docs.travis-ci.com/user/getting-started/) [Travis CI](https://travis-ci.com) for your repository (It will check the solution for you and makes teacher's life easier! The `.travis.yml` file is prepared for your as well as tests.)
+3. Add teacher(s) as [collaborators](https://help.github.com/articles/inviting-collaborators-to-a-personal-repository/) to the repository
+4. Clone the repository or use `git init` and add remote as described in showed instructions at GitHub.
+5. In the repository, add the upstream (name it for example `assignment`).
+6. Get the assignment and push it to your repository (`pull` & `push`).
+7. Try the `stack build` and/or `stack test`. It should not end with build error and all tests should be "red".
+8. Now switch to new branch, where you will do the solution (let's say `solution`).
+9. After changes, do commit & push normally to this branch. Good practice is to make atomic commits. Complete the task - use `stack` (esp. `stack test`, but also `stack ghci` can be useful), visit `test/` to see the expected behavior of your implementation in `src/`.
+10. After finishing all [create Pull Request](https://help.github.com/articles/creating-a-pull-request/) and request a [review](https://help.github.com/articles/about-pull-request-reviews/) from teacher(s) which is/are added to collaborators.
+11. Wait for the review... :coffee:
+
+```
+~/MI-AFP $ git clone git@github.com:MyUsername/MI-AFP_hw00.git
+~/MI-AFP $ cd MI-AFP_hw00
+~/MI-AFP/MI-AFP_hw00 (master)$ git remote add assignment git@github.com:MI-AFP/hw00.git
+~/MI-AFP/MI-AFP_hw00 (master)$ git pull assignment master
+~/MI-AFP/MI-AFP_hw00 (master)$ git push origin master
+~/MI-AFP/MI-AFP_hw00 (master)$ git checkout -b solution
+~/MI-AFP/MI-AFP_hw00 (solution)$ 
+~/MI-AFP/MI-AFP_hw00 (solution)$ git add ...
+~/MI-AFP/MI-AFP_hw00 (solution)$ git commit ...
+~/MI-AFP/MI-AFP_hw00 (solution)$ git push origin
+```
 
 ## Notes 
 
