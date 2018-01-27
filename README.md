@@ -8,9 +8,9 @@ Dummy homework for explanation and showing the workflow
 
 Your task is just to try the workflow of doing homeworks:
 
-1. Create new personal private repository (with some good name like `MI-AFP_hwNN`) for the homework, do not create `README`, `.gitignore`, nor `LICENSE` yet.
-2. [Turn on](https://docs.travis-ci.com/user/getting-started/) [Travis CI](https://travis-ci.com) for your repository (It will check the solution for you and makes teacher's life easier! The `.travis.yml` file is prepared for your as well as tests.)
-3. Add teacher(s) as [collaborators](https://help.github.com/articles/inviting-collaborators-to-a-personal-repository/) to the repository
+1. Create new personal private repository (with some good name like `MI-AFP_hwNN`) for the homework, do not create `README`, `.gitignore`, nor `LICENSE` yet. You need [Student Developer Pack](https://education.github.com/pack) (free private repositories and Travis-CI.com for private repositories), optionally you can use other services after consulation with teacher(s).
+2. [Turn on](https://docs.travis-ci.com/user/getting-started/) [Travis CI](https://travis-ci.com) for your repository. (It will check the solution for you and makes teacher's life easier! The `.travis.yml` file is prepared for your as well as tests.)
+3. Add teacher(s) as [collaborators](https://help.github.com/articles/inviting-collaborators-to-a-personal-repository/) to the repository - they will inform you about their usernames.
 4. Clone the repository or use `git init` and add remote as described in showed instructions at GitHub.
 5. In the repository, add the upstream (name it for example `assignment`).
 6. Get the assignment and push it to your repository (`pull` & `push`).
