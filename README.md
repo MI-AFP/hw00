@@ -12,7 +12,7 @@ Your task is just to try the workflow of doing homeworks:
 2. [Turn on](https://docs.travis-ci.com/user/getting-started/) [Travis CI](https://travis-ci.com) for your repository. (It will check the solution for you and makes teacher's life easier! The `.travis.yml` file is prepared for your as well as tests.)
 3. Add teacher(s) as [collaborators](https://help.github.com/articles/inviting-collaborators-to-a-personal-repository/) to the repository - they will inform you about their usernames.
 4. Clone the repository or use `git init` and add remote as described in showed instructions at GitHub.
-5. In the repository, add the upstream (name it for example `assignment`).
+5. In the repository, add the upstream (name it for example `assignment`, see code block below).
 6. Get the assignment and push it to your repository (`pull` & `push`).
 7. Try the `stack build` and/or `stack test`. It should not end with build error and all tests should be "red".
 8. Now switch to new branch, where you will do the solution (let's say `solution`).
@@ -21,13 +21,16 @@ Your task is just to try the workflow of doing homeworks:
 11. Wait for the review... :coffee:
 
 ```
-~/MI-AFP $ git clone git@github.com:MyUsername/MI-AFP_hw00.git
+~/MI-AFP $ git clone git@github.com:MyUsername/MI-AFP_hw00.git                            # clone your repo
 ~/MI-AFP $ cd MI-AFP_hw00
-~/MI-AFP/MI-AFP_hw00 (master)$ git remote add assignment git@github.com:MI-AFP/hw00.git
-~/MI-AFP/MI-AFP_hw00 (master)$ git pull assignment master
-~/MI-AFP/MI-AFP_hw00 (master)$ git push origin master
-~/MI-AFP/MI-AFP_hw00 (master)$ git checkout -b solution
-~/MI-AFP/MI-AFP_hw00 (solution)$ 
+~/MI-AFP/MI-AFP_hw00 (master)$ git remote add assignment git@github.com:MI-AFP/hw00.git   # repository with hw
+~/MI-AFP/MI-AFP_hw00 (master)$ git pull assignment master                                 # get assignment
+~/MI-AFP/MI-AFP_hw00 (master)$ git push origin master                                     # push to your repo
+~/MI-AFP/MI-AFP_hw00 (master)$ stack build
+~/MI-AFP/MI-AFP_hw00 (master)$ stack test                                                 # all "red"
+~/MI-AFP/MI-AFP_hw00 (master)$ git checkout -b solution                                   # let's solve it
+~/MI-AFP/MI-AFP_hw00 (solution)$ ...                                                      # work on hw
+~/MI-AFP/MI-AFP_hw00 (solution)$ stack test
 ~/MI-AFP/MI-AFP_hw00 (solution)$ git add ...
 ~/MI-AFP/MI-AFP_hw00 (solution)$ git commit ...
 ~/MI-AFP/MI-AFP_hw00 (solution)$ git push origin
